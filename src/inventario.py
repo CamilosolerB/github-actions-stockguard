@@ -9,4 +9,9 @@ def clasificar_stock(stock_actual: int, stock_minimo: int) -> str:
         return "CRITICO" 
     if stock_actual <= stock_minimo: 
         return "BAJO" 
+    if stock_actual > stock_minimo * 2:
+        return "EXCESO"
     return "NORMAL" 
+
+def calcular_sobrestock(stock_actual: int, stock_minimo: int) -> int: 
+    return stock_actual - stock_minimo
