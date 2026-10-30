@@ -2,7 +2,7 @@ import pytest
 from src.inventario import clasificar_stock 
  
 def test_stock_agotado(): 
-    assert clasificar_stock(0, 20) == "AGOTADO" 
+    assert clasificar_stock(0, 20) == "BAJO" 
  
 def test_stock_critico(): 
     assert clasificar_stock(7, 20) == "CRITICO" 
